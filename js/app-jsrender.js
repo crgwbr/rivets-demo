@@ -41,7 +41,7 @@
 
    UIController = Class.extend({
       __loadTemplate: function(name) {
-         var loading = $.get("/templates-jsrender/" + name + ".html");
+         var loading = $.get("templates-jsrender/" + name + ".html");
 
          loading = loading.then(function(template) {
             if (!$.render[name]) {

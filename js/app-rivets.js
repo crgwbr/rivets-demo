@@ -31,7 +31,7 @@
 
    UIController = Class.extend({
       __loadTemplate: function(name) {
-         return $.get("/templates-rivets/" + name + ".html");
+         return $.get("templates-rivets/" + name + ".html");
       }
    });
 
