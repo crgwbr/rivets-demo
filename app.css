@@ -1,0 +1,54 @@
+body {
+   font: 13px/1.5 Helvetica, Arial, sans-serif;
+   color: #333;
+}
+
+.todo-list {
+   width: 90%;
+   max-width: 400px;
+   margin: 50px auto 50px auto;
+   border: 1px solid #EEE;
+   padding: 10px;
+}
+
+.list-name,
+.list-owner {
+   border: none;
+   margin: 10px 0;
+   padding: 0;
+   font-size: 4em;
+   outline: none;
+   width: 400px;
+}
+
+.list-owner {
+   font-size: 2em;
+}
+
+.list ul {
+   padding: 0;
+}
+
+.list ul li {
+   list-style: none;
+   margin: 0;
+}
+
+.list ul li input {
+   position: relative;
+   top: -3px;
+}
+
+.list ul li label {
+   font-weight: bold;
+   font-size: 1.5em;
+}
+
+.list ul li span.created-on {
+   font-size: 0.9em;
+}
+
+.list ul li.done * {
+   color: #CCC;
+   text-decoration: line-through;
+}

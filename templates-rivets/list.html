@@ -1,0 +1,21 @@
+<div class="todo-list">
+   <form class="list-info">
+      <input class="list-name" placeholder="List Name" rv-value="List.Name" />
+      <input class="list-owner" placeholder="Owner" rv-value="List.Owner" />
+   </form>
+
+   <form class="new-item" rv-on-submit="events.addItem">
+      <input class="item-name" placeholder="Item Name" />
+      <input type="submit" value="Add" />
+   </form>
+
+   <div class="list">
+      <ul>
+         <li rv-each-item="List.Items" rv-class-done="item.IsDone">
+            <input type="checkbox" rv-id="item.ID" rv-checked="item.IsDone" />
+            <label rv-for="item.ID" rv-text="item.Name"></label>
+            <span class="created-on" rv-text="item.CreatedOn | date"></span>
+         </li>
+      </ul>
+   </div>
+</div>

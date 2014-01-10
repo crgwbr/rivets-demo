@@ -1,0 +1,23 @@
+<div class="todo-list">
+   <form class="list-info">
+      <input class="list-name" placeholder="List Name" value="{{:List.Name}}" />
+      <input class="list-owner" placeholder="Owner" value="{{:List.Owner}}" />
+   </form>
+
+   <form class="new-item">
+      <input class="item-name" placeholder="Item Name" />
+      <input type="submit" value="Add" />
+   </form>
+
+   <div class="list">
+      <ul>
+         {{for List.Items}}
+            <li class="{{if IsDone}}done{{/if}}">
+               <input type="checkbox" id="{{:ID}}" {{if IsDone}}checked="checked"{{/if}} />
+               <label for="{{:ID}}">{{:Name}}</label>
+               <span class="created-on">{{:CreatedOn.toDateString()}}
+            </li>
+         {{/for}}
+      </ul>
+   </div>
+</div>
